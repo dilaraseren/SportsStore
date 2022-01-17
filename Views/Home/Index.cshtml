@@ -1,0 +1,334 @@
+﻿
+@model ProductsListViewModel
+<header class="container-fluid no-padding header-section header-section1">
+
+    <!-- SidePanel -->
+    <div id="slidepanel">
+
+    </div><!-- SidePanel /- -->
+
+    <div class="container-fluid no-padding menu-block">
+        <!-- Container -->
+        <div class="container">
+            <!-- nav -->
+            <nav class="navbar navbar-default ow-navigation">
+                <div class="navbar-header">
+                    <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                  
+                </div>
+
+                <div id="loginpanel" class="desktop-hide">
+                    <div class="right" id="toggle">
+                        <a id="slideit" href="#slidepanel"><i class="fo-icons fa fa-inbox"></i></a>
+                        <a id="closeit" href="#slidepanel"><i class="fo-icons fa fa-close"></i></a>
+                    </div>
+                </div>
+            </nav><!-- nav /- -->
+        </div><!-- Container /- -->
+    </div>
+</header><!-- Header Section /- -->
+
+<main class="site-main">
+
+    <!-- Slider Section 1 -->
+    <div id="home-revslider" class="slider-section container-fluid no-padding">
+        <!-- START REVOLUTION SLIDER 5.0 -->
+        <div class="rev_slider_wrapper">
+            <div id="home-slider1" class="rev_slider" data-version="5.0">
+                <ul>
+                    @foreach (var p in Model.Products)
+                    {
+                        <li>
+                            <img src=@p.ResimYol alt="slider" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                            <div class="tp-caption tp-shape tp-shapewrapper" id="slide-layer-0"
+                                 data-x="['center','center','center','center']"
+                                 data-y="['middle','middle','middle','middle']"
+                                 data-basealign="slide"
+                                 data-height="full"
+                                 data-hoffset="['0','0','0','0']"
+                                 data-responsive="off"
+                                 data-responsive_offset="off"
+                                 data-start="0"
+                                 data-transform_idle="o:1;"
+                                 data-transform_in="opacity:0;s:2000;e:Power2.easeInOut;"
+                                 data-transform_out="opacity:0;s:500;s:500;"
+                                 data-voffset="['0','0','0','0']"
+                                 data-whitespace="nowrap"
+                                 data-width="full"
+                                 style="z-index: 5;background-color:rgba(34, 34, 34, 0.549);">
+                            </div>
+                            <div class="tp-caption NotGeneric-Title tp-resizeme rs-parallaxlevel-0" id="slide-layer-1"
+                                 data-x="['left','left','left','left']" data-hoffset="['375','140','70','45']"
+                                 data-y="['top','top','top','top']" data-voffset="['240','170','130','90']"
+                                 data-fontsize="['46','40','32','20']"
+                                 data-lineheight="['64','50','38','25']"
+                                 data-width="none"
+                                 data-height="none"
+                                 data-whitespace="nowrap"
+                                 data-transform_idle="o:1;"
+                                 data-transform_in="x:[-105%];s:1000;e:Power4.slideInRight;"
+                                 data-transform_out="y:[100%];s:1000;s:1000;e:Power2.slideInRight;"
+                                 data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                                 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                                 data-start="1000"
+                                 data-splitin="none"
+                                 data-splitout="none"
+                                 data-responsive_offset="on"
+                                 data-elementdelay="0.05"
+                                 style="z-index: 5; white-space: nowrap; letter-spacing: 1.38px; color:#fff; font-weight: 600;  font-family: 'Poppins', sans-serif;">
+                                <p>@p.Ozet</p>
+                            </div>
+                            <div class="tp-caption NotGeneric-Title tp-resizeme rs-parallaxlevel-0" id="slide-layer-2"
+                                 data-x="['left','left','left','left']" data-hoffset="['375','140','70','45']"
+                                 data-y="['top','top','top','top']" data-voffset="['430','320','250','180']"
+                                 data-fontsize="['20','20','20','16']"
+                                 data-lineheight="['64','64','54','34']"
+                                 data-width="none"
+                                 data-height="none"
+                                 data-whitespace="nowrap"
+                                 data-transform_idle="o:1;"
+                                 data-transform_in="x:[105%];s:1000;e:Power4.slideInLeft;"
+                                 data-transform_out="y:[100%];s:1000;s:1000;e:Power2.slideInLeft;"
+                                 data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                                 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                                 data-start="1000"
+                                 data-splitin="none"
+                                 data-splitout="none"
+                                 data-responsive_offset="on"
+                                 data-elementdelay="0.05"
+                                 style="z-index: 5; white-space: nowrap; letter-spacing: 0.6px; color:#c7c6c6; font-weight: 600; font-family: 'Poppins', sans-serif;">
+
+                            </div>
+                            <div class="tp-caption NotGeneric-Button rev-btn  rs-parallaxlevel-0" id="slide-layer-3"
+                                 data-x="['left','left','left','left']" data-hoffset="['375','140','70','45']"
+                                 data-y="['top','top','top','top']" data-voffset="['520','410','330','245']"
+                                 data-fontsize="['14','14','14','12']"
+                                 data-lineheight="['30','30','30','30']"
+                                 data-width="none"
+                                 data-height="none"
+                                 data-whitespace="nowrap"
+                                 data-transform_idle="o:1;"
+                                 data-transform_in="x:[105%];s:1000;e:Power4.slideInLeft;"
+                                 data-transform_out="y:[100%];s:1000;s:1000;e:Power2.slideInLeft;"
+                                 data-style_hover="c:#fff;bg:#ffb609;"
+                                 data-start="3000"
+                                 data-splitin="none"
+                                 data-splitout="none"
+                                 data-actions='[{"event":"click","offset":"0px"}]'
+                                 data-responsive_offset="on"
+                                 data-responsive="off"
+                                 style="z-index: 10; padding:8px 24px 7px; border-radius: 0; border: 2px solid #ffb609; letter-spacing:0.56px; color: #fff; background-color: transparent; font-weight: 600; font-family: 'Poppins', sans-serif; text-transform:uppercase; white-space: nowrap;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;">
+                                Devamını Oku
+                            </div>
+                        </li>
+                    }
+                    @*<li>
+                            <img src="/img/istanbul.jpg" alt="slider" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                            <div class="tp-caption tp-shape tp-shapewrapper" id="slide-layer-4"
+                                 data-x="['center','center','center','center']"
+                                 data-y="['middle','middle','middle','middle']"
+                                 data-basealign="slide"
+                                 data-height="full"
+                                 data-hoffset="['0','0','0','0']"
+                                 data-responsive="off"
+                                 data-responsive_offset="off"
+                                 data-start="0"
+                                 data-transform_idle="o:1;"
+                                 data-transform_in="opacity:0;s:2000;e:Power2.easeInOut;"
+                                 data-transform_out="opacity:0;s:500;s:500;"
+                                 data-voffset="['0','0','0','0']"
+                                 data-whitespace="nowrap"
+                                 data-width="full"
+                                 style="z-index: 5;background-color:rgba(34, 34, 34, 0.549);">
+                            </div>
+                            <div class="tp-caption NotGeneric-Title tp-resizeme rs-parallaxlevel-0" id="slide-layer-5"
+                                 data-x="['left','left','left','left']" data-hoffset="['375','140','70','45']"
+                                 data-y="['top','top','top','top']" data-voffset="['240','170','130','90']"
+                                 data-fontsize="['46','40','32','20']"
+                                 data-lineheight="['64','50','38','25']"
+                                 data-width="none"
+                                 data-height="none"
+                                 data-whitespace="nowrap"
+                                 data-transform_idle="o:1;"
+                                 data-transform_in="y:[-105%];s:1000;e:Power4.slideInUp;"
+                                 data-transform_out="y:[100%];s:1000;s:1000;e:Power2.slideInRight;"
+                                 data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                                 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                                 data-start="1000"
+                                 data-splitin="none"
+                                 data-splitout="none"
+                                 data-responsive_offset="on"
+                                 data-elementdelay="0.05"
+                                 style="z-index: 5; white-space: nowrap; letter-spacing: 1.38px; color:#fff; font-weight: 600;  font-family: 'Poppins', sans-serif;">
+                                UKOME toplantısında,<br>İstanbul'da ulaşıma zam <br>teklifi kabul edilmedi
+                            </div>
+                            <div class="tp-caption NotGeneric-Title tp-resizeme rs-parallaxlevel-0" id="slide-layer-6"
+                                 data-x="['left','left','left','left']" data-hoffset="['375','140','70','45']"
+                                 data-y="['top','top','top','top']" data-voffset="['430','320','250','180']"
+                                 data-fontsize="['20','20','20','16']"
+                                 data-lineheight="['64','64','54','34']"
+                                 data-width="none"
+                                 data-height="none"
+                                 data-whitespace="nowrap"
+                                 data-transform_idle="o:1;"
+                                 data-transform_in="x:[-105%];s:1000;e:Power4.slideInRight;"
+                                 data-transform_out="y:[100%];s:1000;s:1000;e:Power2.slideInRight;"
+                                 data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                                 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                                 data-start="1000"
+                                 data-splitin="none"
+                                 data-splitout="none"
+                                 data-responsive_offset="on"
+                                 data-elementdelay="0.05"
+                                 style="z-index: 5; white-space: nowrap; letter-spacing: 0.6px; color:#c7c6c6; font-weight: 600; font-family: 'Poppins', sans-serif;">
+
+                            </div>
+                            <div class="tp-caption NotGeneric-Button rev-btn  rs-parallaxlevel-0" id="slide-layer-7"
+                                 data-x="['left','left','left','left']" data-hoffset="['375','140','70','45']"
+                                 data-y="['top','top','top','top']" data-voffset="['520','410','330','245']"
+                                 data-fontsize="['14','14','14','12']"
+                                 data-lineheight="['30','30','30','30']"
+                                 data-width="none"
+                                 data-height="none"
+                                 data-whitespace="nowrap"
+                                 data-transform_idle="o:1;"
+                                 data-transform_in="x:[-105%];s:1000;e:Power4.slideInRight;"
+                                 data-transform_out="y:[100%];s:1000;s:1000;e:Power2.slideInRight;"
+                                 data-style_hover="c:#fff;bg:#ffb609;"
+                                 data-start="3000"
+                                 data-splitin="none"
+                                 data-splitout="none"
+                                 data-actions='[{"event":"click","offset":"0px"}]'
+                                 data-responsive_offset="on"
+                                 data-responsive="off"
+                                 style="z-index: 10; padding:8px 24px; border-radius: 0; border: 2px solid #ffb609; letter-spacing:0.56px; color: #fff; background-color: transparent; font-weight: 600; font-family: 'Poppins', sans-serif; text-transform:uppercase; white-space: nowrap;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;">
+                                Devamını Oku
+                            </div>
+                        </li>
+                        <li>
+                            <img src="/img/istanbul.jpg" alt="slider" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                            <div class="tp-caption tp-shape tp-shapewrapper" id="slide-layer-8"
+                                 data-x="['center','center','center','center']"
+                                 data-y="['middle','middle','middle','middle']"
+                                 data-basealign="slide"
+                                 data-height="full"
+                                 data-hoffset="['0','0','0','0']"
+                                 data-responsive="off"
+                                 data-responsive_offset="off"
+                                 data-start="0"
+                                 data-transform_idle="o:1;"
+                                 data-transform_in="opacity:0;s:2000;e:Power2.easeInOut;"
+                                 data-transform_out="opacity:0;s:500;s:500;"
+                                 data-voffset="['0','0','0','0']"
+                                 data-whitespace="nowrap"
+                                 data-width="full"
+                                 style="z-index: 5;background-color:rgba(34, 34, 34, 0.549);">
+                            </div>
+                            <div class="tp-caption NotGeneric-Title tp-resizeme rs-parallaxlevel-0" id="slide-layer-9"
+                                 data-x="['left','left','left','left']" data-hoffset="['375','140','70','45']"
+                                 data-y="['top','top','top','top']" data-voffset="['240','170','130','90']"
+                                 data-fontsize="['46','40','32','20']"
+                                 data-lineheight="['64','50','38','25']"
+                                 data-width="none"
+                                 data-height="none"
+                                 data-whitespace="nowrap"
+                                 data-transform_idle="o:1;"
+                                 data-transform_in="y:[-105%];s:1000;e:Power4.slideInUp;"
+                                 data-transform_out="y:[100%];s:1000;s:1000;e:Power2.slideInRight;"
+                                 data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                                 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                                 data-start="1000"
+                                 data-splitin="none"
+                                 data-splitout="none"
+                                 data-responsive_offset="on"
+                                 data-elementdelay="0.05"
+                                 style="z-index: 5; white-space: nowrap; letter-spacing: 1.38px; color:#fff; font-weight: 600;  font-family: 'Poppins', sans-serif;">
+                                UKOME toplantısında,<br>İstanbul'da ulaşıma zam <br>teklifi kabul edilmedi
+                            </div>
+                            <div class="tp-caption NotGeneric-Title tp-resizeme rs-parallaxlevel-0" id="slide-layer-10"
+                                 data-x="['left','left','left','left']" data-hoffset="['375','140','70','45']"
+                                 data-y="['top','top','top','top']" data-voffset="['430','320','250','180']"
+                                 data-fontsize="['20','20','20','16']"
+                                 data-lineheight="['64','64','54','34']"
+                                 data-width="none"
+                                 data-height="none"
+                                 data-whitespace="nowrap"
+                                 data-transform_idle="o:1;"
+                                 data-transform_in="x:[-105%];s:1000;e:Power4.slideInRight;"
+                                 data-transform_out="y:[100%];s:1000;s:1000;e:Power2.slideInRight;"
+                                 data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                                 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
+                                 data-start="1000"
+                                 data-splitin="none"
+                                 data-splitout="none"
+                                 data-responsive_offset="on"
+                                 data-elementdelay="0.05"
+                                 style="z-index: 5; white-space: nowrap; letter-spacing: 0.6px; color:#c7c6c6; font-weight: 600; font-family: 'Poppins', sans-serif;">
+
+                            </div>
+                            <div class="tp-caption NotGeneric-Button rev-btn  rs-parallaxlevel-0" id="slide-layer-11"
+                                 data-x="['left','left','left','left']" data-hoffset="['375','140','70','45']"
+                                 data-y="['top','top','top','top']" data-voffset="['520','410','330','245']"
+                                 data-fontsize="['14','14','14','12']"
+                                 data-lineheight="['30','30','30','30']"
+                                 data-width="none"
+                                 data-height="none"
+                                 data-whitespace="nowrap"
+                                 data-transform_idle="o:1;"
+                                 data-transform_in="x:[-105%];s:1000;e:Power4.slideInRight;"
+                                 data-transform_out="y:[100%];s:1000;s:1000;e:Power2.slideInRight;"
+                                 data-style_hover="c:#fff;bg:#ffb609;"
+                                 data-start="3000"
+                                 data-splitin="none"
+                                 data-splitout="none"
+                                 data-actions='[{"event":"click","offset":"0px"}]'
+                                 data-responsive_offset="on"
+                                 data-responsive="off"
+                                 style="z-index: 10; padding:8px 24px; border-radius: 0; border: 2px solid #ffb609; letter-spacing:0.56px; color: #fff; background-color: transparent; font-weight: 600; font-family: 'Poppins', sans-serif; text-transform:uppercase; white-space: nowrap;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;">
+                                Devamını Oku
+                            </div>
+                        </li>*@
+                </ul>
+            </div>
+        </div>
+    </div><!-- Slider Section 1 -->
+    <!-- Recent Reviews -->
+    <div class="container-fluid no-left-padding no-right-padding recent-reviews">
+        <!-- Container -->
+        <div class="container">
+
+            <!-- Row -->
+            <div class="row">
+                <!-- Recent Reviews Left -->
+                @await Component.InvokeAsync("Haberler")
+                
+            </div><!-- Row /- -->
+        </div><!-- Container /- -->
+    </div><!-- Recent Reviews /- -->
+
+    <div class="padding-80"></div>
+
+    <!-- Container -->
+    <div class="container">
+        <!-- Row -->
+        <div class="row">
+            <!-- Content Area -->
+            <div class="col-md-9 col-sm-7 content-area content_space">
+                <partial name="~/Views/Haberler/Yasam.cshtml" />
+                <!-- Style Block -->
+
+
+            </div><!-- Content Area /- -->
+            <!-- Widget Area -->
+            <div class="col-md-3 col-sm-5 widget-area widget_space">@await Component.InvokeAsync("Kategoriler") </div><!-- Widget Area /- -->
+        </div><!-- Row /- -->
+    </div><!-- Container /- -->
+
+
+
+</main>

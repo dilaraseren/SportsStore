@@ -1,0 +1,22 @@
+﻿@model ProductsListViewModel
+
+
+<div class="row style-post">
+    @foreach (var p in Model.Products)
+    {
+        <div class="col-md-6 col-sm-12 col-xs-6">
+
+            <div class="type-post">
+                <div class="entry-cover"><a href="#"><img src=@p.ResimYol alt="Style" /></a></div>
+                <span>@p.Category</span>
+                <h3 class="entry-title"><a href="#">@p.Ozet</a></h3>
+
+                <div class="entry-content">
+                    <p>@p.İcerik</p>
+                   
+                </div>
+            </div>
+            
+        </div>
+    }
+    </div><!-- Style Post /- -->
